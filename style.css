@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+#navbar{
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: .5rem 5rem;
+  box-shadow: 5px 5px 20px rgba(0,0,0,.5);
+  background: black ;
+}
+.navbar .navbar-brand{
+  font-size: 25px;
+  font-weight: 800;
+  color: crimson !important;
+}
+#navbarSupportedContent a{
+  color: black;
+  border-bottom: 2px solid transparent ;
+}
+
+#navbarSupportedContent a:hover{
+  border-bottom: 2px solid crimson ; 
+}
+#navbarSupportedContent button{
+   background: crimson;
+   width: 10rem;
+}
+section{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+#home{
+  background:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1)), url(Yuvan.jpeg);
+  background-size: cover;
+  background-position: top;
+}
+#home h1{
+  font-size: 60px;
+  color: white;
+  letter-spacing: 3px;
+  right : 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  position: sticky;
+  text-shadow: 0px 1px 0px #CCC,
+  0px 2px 0px #CCC,
+  0px 3px 0px #CCC,
+  0px 4px 0px #CCC,
+  0px 5px 0px #CCC,
+  0px 6px 0px #CCC,
+  0px 7 px 0px #CCC;
+  animation: text 3s infinite;
+}
+@keyframes text {
+  0%{
+    color: wheat;
+    margin-bottom: -40px;
+  }
+  30%{
+    letter-spacing: 25px;
+    margin-bottom: -40px;
+  }
+  85%{
+    letter-spacing: 12px;
+    margin-bottom: -40px;
+  }
+}
+#about{
+  background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(concert.jpeg );
+  background-position: 100px;
+}
+#about h1{
+  font-weight: bold;
+  font-size:  50px;
+  color: rgb(221, 76, 76);
+  letter-spacing: 2px;
+}
+#about p{
+  flex: 1;
+  font-size: 25px;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-shadow: 0px 1px 0px rgb(190, 109, 109),
+  0px 2px 0px rgb(187, 124, 124),
+  0px 3px 0px #CCC,
+  0px 4px 0px #CCC,
+  0px 5px 0px #CCC,
+  0px 6px 0px #CCC,
+  0px 7 px 0px #CCC,
+  0px 8 px 0px #CCC,
+  0px 9 px 0px #CCC;
+  background: inherit;
+  filter: brightness(200%);
+  font-weight: bold;
+}
+
+#performers{
+  background: linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.4)), url(per.jpeg);
+}
+#performers h1{
+  color: white;
+  font-size: 70px;
+  font-family:cursive;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.card{
+  background: #e5e5e5 !important;
+  border: none !important;
+  box-shadow: 15px 20px 20px rgba(0,0,0,0.3),
+  inset 4px 4px 10px white;
+  border-radius: 20px !important;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 5px;
+  transition: .2s;
+}
+.signin{
+  background: crimson !important;
+  color: white !important;
+  box-shadow: 2px 4px 5px rgba(0,0,0,0.3);
+}
+.card:hover{
+  box-shadow: inset 5px 5px 10px rgba(0,0,0,0.3),
+  inset -4px -4px 10px white;
+  transition: .2s;
+}
+
+#contact{
+  background: linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.4)), url(con-bck.jpeg);
+}
+.contact img{
+  height: 100%;
+}
+.box{
+  width: 80% !important;
+  margin-top: 10px;
+}
+form{
+  margin: auto;
+  max-width: 64em;
+  text-align: center;
+}
+#contact h1{
+  color: white;
+  font-size: 70px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+#contact input{
+  margin: 10px 0px;
+  display: inline;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+#contact textarea{
+  margin: 10px 0px;
+}
+footer{
+  width: 100%;
+  height: 30px;
+  background: rgba(0,0,0,0.8);
+  margin-top: -30px ;
+  text-align: center;
+  color: white;
+  padding: 3px;
+}
+
+.performers button{
+  background-color: crimson;
+}
+
+.right-col{
+  float: right;
+  margin-right: 6%;
+  margin-top: 120px;
+  display: flex;
+  align-items: center;
+}
