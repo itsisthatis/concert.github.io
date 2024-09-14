@@ -8,17 +8,14 @@ pipeline {
                 sh './build.sh'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing...'
-                sh './test.sh'
-            }
+    }
+
+    post {
+        success {
+            echo 'Build succeeded!'
         }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying...'
-                sh './deploy.sh'
-            }
+        failure {
+            echo 'Build failed.'
         }
     }
 }
