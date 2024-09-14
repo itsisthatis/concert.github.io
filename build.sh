@@ -15,11 +15,12 @@ mkdir $BUILD_DIR
 # Copy all relevant files to the build directory
 echo "Copying files to build directory..."
 cp -r $SOURCE_DIR/*.html $BUILD_DIR/
+cp -r $SOURCE_DIR/*.css $BUILD_DIR/
 cp -r $SOURCE_DIR/*.js $BUILD_DIR/
 cp -r $SOURCE_DIR/*.mp3 $BUILD_DIR/ # Assuming audio files are mp3
 cp -r $SOURCE_DIR/*.png $BUILD_DIR/ # Assuming images are png
-cp -r $SOURCE_DIR/*.jpg $BUILD_DIR/ # Assuming images are jpg
-cp -r $SOURCE_DIR/*.gif $BUILD_DIR/ # Assuming images are gif
+cp -r $SOURCE_DIR/*.jpeg $BUILD_DIR/ # Assuming images are jpg
+cp -r $SOURCE_DIR/*.webp $BUILD_DIR/ # Assuming images are gif
 
 # Optionally, you can include other tasks like:
 # - Minifying CSS files
