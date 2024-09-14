@@ -16,10 +16,6 @@ mkdir $BUILD_DIR
 echo "Copying HTML files..."
 cp -r $SOURCE_DIR/*.html $BUILD_DIR/
 
-# Copy CSS files to the build directory
-echo "Copying CSS files..."
-cp -r $SOURCE_DIR/css $BUILD_DIR/
-
 # Copy JavaScript files to the build directory
 echo "Copying JavaScript files..."
 cp -r $SOURCE_DIR/js $BUILD_DIR/
