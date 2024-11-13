@@ -11,6 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
+                sh 'chmod +x ./build.sh'
                 sh './build.sh'
 
                 // Clean any untracked files
