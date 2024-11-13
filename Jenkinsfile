@@ -15,7 +15,6 @@ pipeline {
                 sh 'git add -A'
                 sh 'git commit -m "Deploying to GitHub Pages"'
                 sh 'git push origin main --force'
-                sh 'git stash pop || echo "No stashed changes to pop"'
             }
         }
     }
