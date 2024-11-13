@@ -21,7 +21,8 @@ pipeline {
                         echo 'No changes to commit.'
                 }
                 }
-                sh 'cp -R ./build/* ~/jenkins_build_output/website/'
+                sh 'mkdir -p /var/jenkins_home/jenkins_build_output/website'
+                sh 'cp -R ./build/* /var/jenkins_home/jenkins_build_output/website/'
             }
         }
     }
