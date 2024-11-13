@@ -21,6 +21,7 @@ pipeline {
                         echo 'No changes to commit.'
                 }
                 }
+                sh 'cp -R ./build/* ~/jenkins_build_output/website/'
             }
         }
     }
