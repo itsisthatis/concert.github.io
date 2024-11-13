@@ -12,9 +12,15 @@ pipeline {
                 sh 'git checkout main'
                 sh 'git stash pop || echo "No stash to pop"'
                 sh 'git status'
-                sh 'git add -A'
-                sh 'git commit -m "Deploying to GitHub Pages"'
-                sh 'git push origin main --force'
+                def status = sh(script: 'git status --porcelain', returnStdout: true).trim()
+                if (status) {
+                    sh 'git add -A'
+                    sh 'git commit -m "Deploying to GitHub Pages"'
+                    sh 'git push origin main --force'
+                }
+                else {
+                        echo 'No changes to commit.'
+                }
             }
         }
     }
