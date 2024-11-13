@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        GITHUB_CREDS = credentials('ca0de8c8-b8d7-4362-91f9-fe95afa38008')
+    }
 
     stages {
         stage('Checkout SCM') {
