@@ -14,7 +14,7 @@ pipeline {
                 sh 'git status'
                 sh 'git add .'
                 sh 'git commit -m "Deploying to GitHub Pages"'
-                sh 'git push origin main --force'
+                sh 'git push origin my-new-branch --force'
             }
         }
     }
