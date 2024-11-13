@@ -12,6 +12,7 @@ pipeline {
                 sh 'git checkout main'
                 sh 'git stash pop || echo "No stash to pop"'
                 sh 'git status'
+                script{
                 def status = sh(script: 'git status --porcelain', returnStdout: true).trim()
                 if (status) {
                     sh 'git add -A'
@@ -20,6 +21,7 @@ pipeline {
                 }
                 else {
                         echo 'No changes to commit.'
+                }
                 }
             }
         }
