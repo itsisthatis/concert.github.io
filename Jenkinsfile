@@ -7,6 +7,7 @@ pipeline {
                 echo 'Building...'
                 sh 'chmod +x ./build.sh'
                 sh './build.sh'
+                sh 'git restore build.sh'
                 sh 'git clean -fd'  // Clean untracked files
                 sh 'git status'
                 sh 'git checkout my-new-branch'
