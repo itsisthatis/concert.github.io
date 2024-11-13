@@ -29,22 +29,6 @@ pipeline {
                 sh 'cp -R ./build/* ~/jenkins-docker/website/'
             }
         }
-        stage('Deploy to Nginx Docker') {
-            steps {
-                script {
-                    docker.image('nginx').inside {
-                        // Ensure the website directory exists inside the Nginx container
-                        sh "mkdir -p ${WEBSITE_DIR}"
-
-                        // Copy the built website to the Nginx container's directory
-                        sh "cp -R ~/jenkins-docker/website/* ${WEBSITE_DIR}/"
-
-                        // Reload Nginx to serve the updated content
-                        sh "nginx -s reload"
-                    }
-                }
-            }
-        }
     }
 
     post {
