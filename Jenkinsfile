@@ -27,9 +27,6 @@ pipeline {
                 }
                 sh 'mkdir -p ~/jenkins-docker/website'
                 sh 'cp -R ./build/* ~/jenkins-docker/website/'
-                sh "docker exec -it ${DOCKER_CONTAINER} mkdir -p ${WEBSITE_DIR}"
-                sh "docker cp ~/jenkins-docker/website/. ${DOCKER_CONTAINER}:${WEBSITE_DIR}/"
-                sh "docker exec -it ${DOCKER_CONTAINER} nginx -s reload"
             }
         }
     }
