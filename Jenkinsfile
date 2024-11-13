@@ -31,7 +31,8 @@ pipeline {
         stage('Commit and Push') {
             steps {
                 echo 'Committing changes and pushing to remote...'
-
+                sh 'git config --global user.email "shnkvp@gmail.com"'
+                sh 'git config --global user.name "Shankar V P"'
                 // Add any new files or changes
                 sh 'git add .'
                 sh 'git commit -m "Deploying to GitHub Pages"'
